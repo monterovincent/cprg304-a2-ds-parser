@@ -22,5 +22,77 @@ package implementations;
  */
 public class MyDLLNode
 {
+	/** The string value stored in the node */
+	private String element;
+	
+	/** Previous node in the chain; null if this node is the head */
+	private MyDLLNode pred;
+	
+	/**Next node in the chain , null if this node is the tail */
+	private MyDLLNode succ;
+	
+	/**
+     * Creates an unlinked node holding the given element.
+     *
+     * @param element the String to store
+     */
+	
+	public MyDLLNode(String element)
+	{
+		this.element = element;
+		this.pred = null;
+		this.succ = null;
+	}
+	
+	/**
+     * Creates a node holding the given element, already linked to its neighbours.
+     *
+     * @param element the String to store
+     * @param pred    the node before this one, or null if this will be the head
+     * @param succ    the node after this one, or null if this will be the tail
+     */
+	 public MyDLLNode(String element, MyDLLNode pred,MyDLLNode succ)
+	 {
+		 this.element = element;
+		 this.pred = pred;
+		 this.succ = succ;
+	 }
+	 
+	 /** @return the String stored in this node */
+	 
+	 public String getElement()
+	 {
+		 return element;
+	 }
+	 /** @param element the new String to store in this node */
+	 public void setElement(String element)
+	 {
+		 this.element = element;
+	 }
+	 
+	 /** @return the previous node, or null if this node is the head */
+	 
+	 public MyDLLNode getPred()
+	 {
+		 return pred;
+	 }
+	 
+	 /** @param pred the node to link before this one (null makes this the head) */
+	 
+	 public void setPred(MyDLLNode pred)
+	 {
+		 this.pred = pred;
+	 }
+	 /** @return the next node, or null if this node is the tail */
+	 public MyDLLNode getSucc()
+	 {
+		 return succ;
+	 }
+	 /** @param succ the node to link after this one (null makes this the tail) */
+	 
+	 public void setSucc(MyDLLNode succ)
+	 {
+		 this.succ = succ;
+	 }
 
 }
