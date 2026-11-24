@@ -1,0 +1,8 @@
+/bin/
+
+# Person C's local parser edge-case files
+/res/testEmpty.txt
+/res/testOnlyClosing.txt
+/res/testUnclosed.txt
+/res/testDeepNesting.txt
+/res/testMismatch.txt
